@@ -9,15 +9,14 @@ use core::result::Result;
 
 // Import heap related library from `alloc`
 // https://doc.rust-lang.org/alloc/index.html
-use alloc::{vec, vec::Vec};
+use alloc::{vec::Vec};
 
 // Import CKB syscalls and structures
 // https://nervosnetwork.github.io/ckb-std/riscv64imac-unknown-none-elf/doc/ckb_std/index.html
 use ckb_std::{
     entry,
     default_alloc,
-    debug,
-    high_level::{load_script, load_tx_hash, load_cell_lock_hash, load_cell_data, QueryIter},
+    high_level::{load_script, load_cell_lock_hash, load_cell_data, QueryIter},
     ckb_constants::Source,
     error::SysError,
     ckb_types::{bytes::Bytes, prelude::*},

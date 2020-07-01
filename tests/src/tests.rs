@@ -97,9 +97,10 @@ fn test_basic() {
     let tx = context.complete_tx(tx);
 
     // run
-    context
+    let cycles = context
         .verify_tx(&tx, MAX_CYCLES)
         .expect("pass verification");
+    println!("cycles: {}", cycles);
 }
 
 #[test]
@@ -108,9 +109,10 @@ fn test_destroy_udt() {
     let tx = context.complete_tx(tx);
 
     // run
-    context
+    let cycles = context
         .verify_tx(&tx, MAX_CYCLES)
         .expect("pass verification");
+    println!("cycles: {}", cycles);
 }
 
 #[test]
@@ -129,8 +131,9 @@ fn test_create_sudt_with_owner_mode() {
     let tx = context.complete_tx(tx);
 
     // run
-    context
+    let cycles = context
         .verify_tx(&tx, MAX_CYCLES)
         .expect("pass verification");
+    println!("cycles: {}", cycles);
 }
 
